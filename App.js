@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, YellowBox } from 'react-native';
-import EventList from "./components/EventList";
+import MyNavigator from './components/MyNavigator'
 
 YellowBox.ignoreWarnings([
   'Warning: componentWillMount is deprecated',
@@ -9,15 +9,6 @@ YellowBox.ignoreWarnings([
 
 export default class App extends React.Component {
   render() {
-    return <EventList />;
+    return <MyNavigator />
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
