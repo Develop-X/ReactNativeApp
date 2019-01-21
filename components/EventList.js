@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, FlatList, } from 'react-native';
 import EventCard from '../components/EventCard';
 import ActionButton from 'react-native-action-button'
+import { getEvents } from '../utils/api'
 
 const styles = StyleSheet.create({
     list: {
@@ -12,11 +13,13 @@ const styles = StyleSheet.create({
 });
 
 class EventList extends Component {
+
     state = {
         events: [],
     }
 
     componentDidMount() {
+
         setInterval(() => {
             this.setState({
                 events: this.state.events.map(evt => ({
@@ -26,11 +29,17 @@ class EventList extends Component {
             });
         }, 1000);
 
-        const events = require('../db.json').events.map(e => ({
-            ...e,
-            date: new Date(e.date),
-        }));
-        this.setState({ events });
+        this.props.navigation.addListener(
+            'didFocus',
+            () => {
+                getEvents().then(events => this.setState({ events }));
+            }
+        );
+        // const events = require('../db.json').events.map(e => ({
+        //     ...e,
+        //     date: new Date(e.date),
+        // }));
+        // this.setState({ events });
     }
 
     handleAddEvent = () => {
