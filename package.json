@@ -1,6 +1,7 @@
 {
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
+    "mock-server": "json-server db.json",
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
@@ -26,7 +27,8 @@
     "jest-expo": "32.0.0",
     "react-native-scripts": "2.0.1",
     "react-test-renderer": "16.7.0",
-    "prop-types": "^15.6.2"
+    "prop-types": "^15.6.2",
+    "json-server": "^0.14.2"
   },
   "private": true
 }
