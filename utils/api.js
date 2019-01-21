@@ -1,8 +1,7 @@
+import uuid from 'uuid';
 import moment from 'moment';
-import Expo from 'expo';
-import uuid from 'uuid'
 
-const url = 'http://localhost:3000/events';
+const url = 'http://10.0.75.1:3000/events';
 
 export function getEvents() {
     return fetch(url)
@@ -27,16 +26,6 @@ export function saveEvent({ title, date }) {
 }
 
 
-export function formatDateTime(dateString) {
-    const parsed = moment(new Date(dateString));
-
-    if (!parsed.isValid()) {
-        return dateString;
-    }
-
-    return parsed.format('H A on D MMM YYYY');
-}
-
 export function formatDate(dateString) {
     const parsed = moment(new Date(dateString));
 
@@ -45,6 +34,18 @@ export function formatDate(dateString) {
     }
 
     return parsed.format('D MMM YYYY');
+}
+
+
+export function formatDateTime(dateString) {
+    console.log(dateString);
+    const parsed = moment(new Date(dateString));
+
+    if (!parsed.isValid()) {
+        return dateString;
+    }
+
+    return parsed.format('H A on D MMM YYYY');
 }
 
 export function getCountdownParts(eventDate) {
