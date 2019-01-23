@@ -16,7 +16,7 @@ class EventList extends Component {
 
     state = {
         events: [],
-    }
+    };
 
     componentDidMount() {
 
