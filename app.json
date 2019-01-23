@@ -23,7 +23,11 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.test.countdown"
+    },
+    "android": {
+      "package": "com.test.countdown"
     },
     "description": "test"
   }

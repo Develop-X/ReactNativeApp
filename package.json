@@ -12,13 +12,19 @@
     "preset": "jest-expo"
   },
   "dependencies": {
+    "appcenter": "1.11.0",
+    "appcenter-analytics": "1.11.0",
+    "appcenter-crashes": "1.11.0",
     "expo": "^32.0.0",
+    "moment": "^2.23.0",
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
-    "moment": "^2.23.0",
     "react-native-action-button": "2.8.5",
-    "react-navigation": "3.0.9",
     "react-native-modal-datetime-picker": "6.0.0",
+    "react-navigation": "3.0.9",
+    "react-redux": "^6.0.0",
+    "redux": "^4.0.1",
+    "redux-saga": "^1.0.0",
     "uuid": "3.3.2"
   },
   "devDependencies": {
