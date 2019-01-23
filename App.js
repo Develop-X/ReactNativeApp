@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, YellowBox } from 'react-native';
-import MyNavigator from './components/MyNavigator'
+import Navigator from './components/Navigator'
 import Login from './components/Login'
 
 YellowBox.ignoreWarnings([
@@ -9,12 +9,12 @@ YellowBox.ignoreWarnings([
 ]);
 
 export default class App extends React.Component {
-  // render() {
-  //   return <MyNavigator />
-  // }
   render() {
-    return <Login/>
+    return <Navigator />
   }
+  // render() {
+  //   return <Login/>
+  // }
 }
 
 const styles = StyleSheet.create({

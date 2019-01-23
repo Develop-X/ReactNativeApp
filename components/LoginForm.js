@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {View, Text, TextInput, TouchableOpacity, Alert, Button, StyleSheet, StatusBar} from 'react-native';
+import { withNavigation } from 'react-navigation';
 
 const styles = StyleSheet.create({
     container: {
@@ -35,7 +36,16 @@ const onSignUpButtonPress = () => {
     Alert.alert('Signed Up!');
 };
 
+
 class LoginForm extends Component {
+
+    handleLogin=()=>{
+        this.props.navigation.navigate('home')
+    };
+
+    handleSignup=()=>{
+        this.props.navigation.navigate('signup')
+    };
 
     render() {
         return (
@@ -57,12 +67,12 @@ class LoginForm extends Component {
                            secureTextEntry/>
 
                 <TouchableOpacity style={styles.buttonContainer}
-                                  onPress={onLoginButtonPress}>
-                    <Text style={styles.buttonText}>LOGIN</Text>
+                                  onPress={this.handleLogin}>
+                    <Text style={styles.buttonText} >LOGIN</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.buttonContainer}
-                                  onPress={onSignUpButtonPress}>
+                                  onPress={this.handleSignup}>
                     <Text style={styles.buttonText}>SIGN UP</Text>
                 </TouchableOpacity>
 
@@ -71,4 +81,4 @@ class LoginForm extends Component {
     }
 }
 
-export default LoginForm;
+export default withNavigation(LoginForm);
