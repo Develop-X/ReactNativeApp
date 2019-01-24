@@ -12,9 +12,6 @@
     "preset": "jest-expo"
   },
   "dependencies": {
-    "appcenter": "1.11.0",
-    "appcenter-analytics": "1.11.0",
-    "appcenter-crashes": "1.11.0",
     "expo": "^32.0.0",
     "moment": "^2.23.0",
     "react": "16.5.0",

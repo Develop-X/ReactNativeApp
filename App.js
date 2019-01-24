@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, YellowBox } from 'react-native';
-import Navigator from './components/Navigator'
-import Login from './components/Login'
+import Navigator from './src/components/Navigator'
+import Login from './src/components/Login'
 
 YellowBox.ignoreWarnings([
   'Warning: componentWillMount is deprecated',
